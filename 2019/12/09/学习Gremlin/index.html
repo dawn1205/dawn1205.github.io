@@ -178,7 +178,7 @@
 </tr>
 <tr>
 <td>作者</td>
-<td>刘鑫</td>
+<td>数据组刘某</td>
 </tr>
 </tbody></table>
 <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>随着社交、电商、金融、零售、物联网等行业的快速发展，现实社会织起了了一张庞大而复杂的关系网，<strong>传统数据库很难处理关系运算</strong>。</p>
@@ -289,7 +289,7 @@
 <li><p>边Edge：一般指关系。比如：朋友关系、转账动作等。</p>
 </li>
 <li><p>属性Property：顶点或边可以包含属性，比如：人的姓名、人的年龄、转账的时间。</p>
-<p><img src="1.png" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/1.png" srcset="/img/loading.gif" alt=""></p>
 </li>
 </ul>
 <h3 id="2-2、图的基本操作"><a href="#2-2、图的基本操作" class="headerlink" title="2.2、图的基本操作"></a>2.2、图的基本操作</h3><ul>
@@ -362,7 +362,7 @@
 <p>类似的，通过g.E().values()查询所有边的属性值。</p>
 </blockquote>
 <h2 id="3-边的遍历操作"><a href="#3-边的遍历操作" class="headerlink" title="3.边的遍历操作"></a>3.边的遍历操作</h2><h3 id="3-1、边遍历概念"><a href="#3-1、边遍历概念" class="headerlink" title="3.1、边遍历概念"></a>3.1、边遍历概念</h3><p>边遍历是指通过顶点来访问与其有关联边的邻接顶点（或者仅访问邻接边），边遍历是图数据库与图计算的核心。</p>
-<p><img src="2.png" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/2.png" srcset="/img/loading.gif" alt=""></p>
 <h4 id="3-1-1、顶点为基准"><a href="#3-1-1、顶点为基准" class="headerlink" title="3.1.1、顶点为基准"></a>3.1.1、顶点为基准</h4><ul>
 <li>out(label): 根据指定的EdgeLabel来访问顶点的OUT方向邻接点（可以是零个EdgeLabel，代表所有类型边；也可以一个或多个EdgeLabel，代表任意给定EdgeLabel的边，下同）</li>
 <li>in(label): 根据指定的EdgeLabel来访问顶点的IN方向邻接点</li>
@@ -552,7 +552,7 @@
 
 
 
-<h2 id="5-图查询返回结果数限制"><a href="#5-图查询返回结果数限制" class="headerlink" title="5.图查询返回结果数限制"></a>5.图查询返回结果数限制</h2><h3 id="5-1、说明"><a href="#5-1、说明" class="headerlink" title="5.1、说明"></a>5.1、说明</h3><p><img src="C:%5CUsers%5CLiux-Pc%5CDesktop%5C%E5%AD%A6%E4%B9%A0Gremlin%5C3.png" srcset="/img/loading.gif" alt=""></p>
+<h2 id="5-图查询返回结果数限制"><a href="#5-图查询返回结果数限制" class="headerlink" title="5.图查询返回结果数限制"></a>5.图查询返回结果数限制</h2><h3 id="5-1、说明"><a href="#5-1、说明" class="headerlink" title="5.1、说明"></a>5.1、说明</h3><p><img src="/img/3.png" srcset="/img/loading.gif" alt=""></p>
 <ul>
 <li><p>Gremlin能统计查询结果集中元素的个数，且允许从结果集中做范围截取。假设某个查询操作（如：<code>g.V()</code>）的结果集包含8个元素，我们可以从这8个元素中截取指定部分。主要包括： </p>
 </li>
@@ -1343,7 +1343,7 @@
 <h2 id="22-局部操作local"><a href="#22-局部操作local" class="headerlink" title="22.局部操作local"></a>22.局部操作local</h2><h3 id="22-1、说明"><a href="#22-1、说明" class="headerlink" title="22.1、说明"></a>22.1、说明</h3><p> 通过Gremlin进行图遍历通常是当前step处理前一step传递过来的对象流。很多操作是针对传递过来的对象流中的全部对象进行操作，但也有很多时候需要针对对象流中的单个对象而非对象流中的全部对象进行一些操作。这种对单个对象的局部操作，可以使用local()语句实现。</p>
 <p>另外，有一些step默认的操作是针对对象流中的全部对象，但也可以通过参数来改变默认操作，允许针对对象流中的单个对象进行操作，包括count()，max()，mean()，min()，sum()，order()，tail()，limit()，range()，sample()，skip()和dedup()等。</p>
 <h3 id="22-2、实例说明"><a href="#22-2、实例说明" class="headerlink" title="22.2、实例说明"></a>22.2、实例说明</h3><h4 id="22-2-1、local的作用说明"><a href="#22-2-1、local的作用说明" class="headerlink" title="22.2.1、local的作用说明"></a>22.2.1、local的作用说明</h4><p>是否使用<code>local()</code>的区别可以参见如下示意图： </p>
-<p><img src="4.png" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/4.png" srcset="/img/loading.gif" alt=""></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不使用local()</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">g.V().hasLabel(<span class="string">'person'</span>).as(<span class="string">'person'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    .properties(<span class="string">'age'</span>).order().by(value).limit(<span class="number">2</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    .value().as(<span class="string">'age'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    .select(<span class="string">'person'</span>,<span class="string">'age'</span>).by(<span class="string">'name'</span>).by()</span></pre></td></tr></table></figure>
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用local()</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">g.V().hasLabel(<span class="string">'person'</span>).as(<span class="string">'person'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    .local(properties(<span class="string">'age'</span>).order().by(value).limit(<span class="number">2</span>))</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    .value().as(<span class="string">'age'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    .select(<span class="string">'person'</span>,<span class="string">'age'</span>).by(<span class="string">'name'</span>).by()</span></pre></td></tr></table></figure>
